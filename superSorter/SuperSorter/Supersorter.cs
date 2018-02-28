@@ -4,34 +4,34 @@ using System.Diagnostics;
 
 namespace SuperSorter
 {
-    public abstract  class SuperSorter //template pattern
+    public abstract class SuperSorter //template pattern
     {
-        protected static Stopwatch sw = new Stopwatch();
-        public int sort(int[] array)
+        protected static Stopwatch Sw = new Stopwatch();
+        public int Sort(int[] array)
         {
             startTime();
-            sortBitch(array);
+            SortBitch(array);
             endTime();
 
-            return sw.Elapsed.Milliseconds;
+            return Sw.Elapsed.Milliseconds;
         }
 
-        protected abstract void sortBitch(int[] array);
+        protected abstract void SortBitch(int[] array);
 
         void startTime()
         {
-            sw.Start();
+            Sw.Start();
         }
 
         void endTime()
         {
-            sw.Stop();
+            Sw.Stop();
         }
     }
 
-    public class quicksort : SuperSorter
+    public class Quicksort : SuperSorter
     {
-        protected override void sortBitch(int[] array)
+        protected override void SortBitch(int[] array)
         {
             QuickSort(array,0,array.Length-1);
         }
@@ -75,9 +75,9 @@ namespace SuperSorter
 
 
 
-    public class bubblesort : SuperSorter
+    public class Bubblesort : SuperSorter
     {
-        protected override void sortBitch(int[] array)
+        protected override void SortBitch(int[] array)
         {
             int t;
             for (int p = 0; p <= array.Length - 2; p++)

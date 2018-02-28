@@ -6,13 +6,13 @@ namespace SuperSorter
 {
     public interface IArrayGenerator //strategy pattern
     {
-        int[] generateArray(int n, int seed);
+        int[] GenerateArray(int n, int seed);
     }
 
 
     public class RandomArraygenerator:IArrayGenerator
     {
-        public int[] generateArray(int n, int seed)
+        public int[] GenerateArray(int n, int seed)
         {
             Random randomThisShit = new Random(seed);
             int[] theArray = new int[n];
@@ -28,7 +28,7 @@ namespace SuperSorter
 
     public class NearlySortedArrayGenerator :IArrayGenerator
     {
-        public int[] generateArray(int n, int seed)
+        public int[] GenerateArray(int n, int seed)
         {
             Random randomThisShit = new Random(seed);
             int[] theArray = new int[n];
@@ -49,7 +49,7 @@ namespace SuperSorter
 
     public class ReverseOrderArrayGenerator : IArrayGenerator
     {
-        public int[] generateArray(int n, int seed)
+        public int[] GenerateArray(int n, int seed)
         {
             int[] theArray = new int[n];
 
@@ -65,7 +65,7 @@ namespace SuperSorter
 
     public class FewUniqueArrayGenerator : IArrayGenerator
     {
-        public int[] generateArray(int n, int seed)
+        public int[] GenerateArray(int n, int seed)
         {
             Random randomThisShit = new Random(seed);
 
@@ -82,11 +82,11 @@ namespace SuperSorter
             }
 
             //ghaiodfgpoadf'
-            foreach (var item in theArray)
-            {
-                Console.Write(item + " , ");
+            //foreach (var item in theArray)
+            //{
+            //    Console.Write(item + " , ");
                 
-            }
+            //}
             //dusiaAnfas
             return theArray;
         }

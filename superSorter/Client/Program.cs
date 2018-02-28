@@ -12,26 +12,26 @@ namespace Client
     {
         static void Main(string[] args)
         {
-            quicksort sort = new quicksort();
+            Quicksort sort = new Quicksort();
 
-            IArrayGenerator a = new FewUniqueArrayGenerator();
+            IArrayGenerator a = new NearlySortedArrayGenerator();
 
 
-            int[] arrayToSort = a.generateArray(200, 3200);
-            
-       
-            //foreach (var VARIABLE in arrayToSort)
-            //{
-            //    Console.Write(VARIABLE + " , ");
-            //}
+            int[] arrayToSort = a.GenerateArray(200, 3200);
+
+
+            foreach (var VARIABLE in arrayToSort)
+            {
+                Console.Write(VARIABLE + " , ");
+            }
 
             Console.WriteLine();
-            int time = sort.sort(arrayToSort);
+            int time = sort.Sort(arrayToSort);
 
-            //foreach (var VARIABLE in arrayToSort)
-            //{
-            //    Console.Write(VARIABLE + " , ");
-            //}
+            foreach (var VARIABLE in arrayToSort)
+            {
+                Console.Write(VARIABLE + " , ");
+            }
 
             Console.WriteLine("sorting took " + time + "miliseconds");
         }
