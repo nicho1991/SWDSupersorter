@@ -7,6 +7,7 @@ namespace SuperSorter
     public abstract class SuperSorter //template pattern
     {
         protected static Stopwatch Sw = new Stopwatch();
+
         public int Sort(int[] array)
         {
             startTime();
@@ -33,7 +34,7 @@ namespace SuperSorter
     {
         protected override void SortBitch(int[] array)
         {
-            QuickSort(array,0,array.Length-1);
+            QuickSort(array, 0, array.Length - 1);
         }
 
         private void QuickSort(int[] a, int start, int end)
@@ -70,10 +71,6 @@ namespace SuperSorter
         }
     }
 
-    
-
-
-
 
     public class Bubblesort : SuperSorter
     {
@@ -92,7 +89,6 @@ namespace SuperSorter
                     }
                 }
             }
-
         }
     }
 }
