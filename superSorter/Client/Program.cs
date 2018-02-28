@@ -26,14 +26,14 @@ namespace Client
             }
 
             Console.WriteLine();
-            int time = sort.Sort(arrayToSort);
+            var time = sort.Sort(arrayToSort);
 
             foreach (var VARIABLE in arrayToSort)
             {
                 Console.Write(VARIABLE + " , ");
             }
 
-            Console.WriteLine("sorting took " + time + "miliseconds");
+            Console.WriteLine("sorting took " + time + " miliseconds");
         }
     }
 }
