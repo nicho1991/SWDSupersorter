@@ -81,13 +81,6 @@ namespace SuperSorter
                     theArray[i] = 1;
             }
 
-            //ghaiodfgpoadf'
-            //foreach (var item in theArray)
-            //{
-            //    Console.Write(item + " , ");
-                
-            //}
-            //dusiaAnfas
             return theArray;
         }
     }
