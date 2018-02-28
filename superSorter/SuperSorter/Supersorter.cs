@@ -8,23 +8,23 @@ namespace SuperSorter
     {
         protected static Stopwatch Sw = new Stopwatch();
 
-        public int Sort(int[] array)
+        public double Sort(int[] array)
         {
-            startTime();
+            StartTime();
             SortBitch(array);
-            endTime();
+            EndTime();
 
-            return Sw.Elapsed.Milliseconds;
+            return Sw.Elapsed.TotalMilliseconds;
         }
 
         protected abstract void SortBitch(int[] array);
 
-        void startTime()
+        private static void StartTime()
         {
             Sw.Start();
         }
 
-        void endTime()
+        private static void EndTime()
         {
             Sw.Stop();
         }
