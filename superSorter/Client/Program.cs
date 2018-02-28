@@ -35,7 +35,7 @@ namespace Client
         {
             foreach (var variable in arrayToSort)
             {
-                Console.Write(variable + " , ");
+                Console.Write(variable + ", ");
             }
         }
     }
