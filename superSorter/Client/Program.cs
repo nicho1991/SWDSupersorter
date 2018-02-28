@@ -16,24 +16,27 @@ namespace Client
 
             IArrayGenerator a = new NearlySortedArrayGenerator();
 
+            var arrayToSort = a.GenerateArray(200, 3200);
 
-            int[] arrayToSort = a.GenerateArray(200, 3200);
+            Console.WriteLine("\nPrinting unsorted array:\n");
 
+            PlzPrint(arrayToSort);
 
-            foreach (var VARIABLE in arrayToSort)
-            {
-                Console.Write(VARIABLE + " , ");
-            }
+            Console.WriteLine("\n\nPrinting sorted array:\n");
 
-            Console.WriteLine();
             var time = sort.Sort(arrayToSort);
 
-            foreach (var VARIABLE in arrayToSort)
-            {
-                Console.Write(VARIABLE + " , ");
-            }
+            PlzPrint(arrayToSort);
 
-            Console.WriteLine("sorting took " + time + " miliseconds");
+            Console.WriteLine("\n\nSorting took " + time + " miliseconds\n");
+        }
+
+        private static void PlzPrint(IEnumerable<int> arrayToSort)
+        {
+            foreach (var variable in arrayToSort)
+            {
+                Console.Write(variable + " , ");
+            }
         }
     }
 }
