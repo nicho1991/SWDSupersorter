@@ -4,37 +4,37 @@ using System.Diagnostics;
 
 namespace SuperSorter
 {
-    public abstract  class SuperSorter //template pattern
+    public abstract class SuperSorter //template pattern
     {
-        protected static Stopwatch sw = new Stopwatch();
-        public double sort(int[] array)
-        {
-            startTime();
-            sortBitch(array);
-            endTime();
+        protected static Stopwatch Sw = new Stopwatch();
 
-            return sw.Elapsed.TotalMilliseconds;
+        public double Sort(int[] array)
+        {
+            StartTime();
+            SortBitch(array);
+            EndTime();
+
+            return Sw.Elapsed.TotalMilliseconds;
         }
 
-        protected abstract void sortBitch(int[] array);
+        protected abstract void SortBitch(int[] array);
 
-        void startTime()
+        private static void StartTime()
         {
-            sw.Start();
+            Sw.Start();
         }
 
-        void endTime()
+        private static void EndTime()
         {
-            sw.Stop();
+            Sw.Stop();
         }
     }
 
-    public class quicksort : SuperSorter
+    public class Quicksort : SuperSorter
     {
-        protected override void sortBitch(int[] array)
+        protected override void SortBitch(int[] array)
         {
-            Console.WriteLine("sorting started");
-            QuickSort(array,0,array.Length-1);
+            QuickSort(array, 0, array.Length - 1);
         }
 
         private void QuickSort(int[] a, int start, int end)
@@ -71,14 +71,10 @@ namespace SuperSorter
         }
     }
 
-    
 
-
-
-
-    public class bubblesort : SuperSorter
+    public class Bubblesort : SuperSorter
     {
-        protected override void sortBitch(int[] array)
+        protected override void SortBitch(int[] array)
         {
             int t;
             for (int p = 0; p <= array.Length - 2; p++)
@@ -93,7 +89,6 @@ namespace SuperSorter
                     }
                 }
             }
-
         }
     }
 }
