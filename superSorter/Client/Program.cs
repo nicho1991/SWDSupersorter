@@ -14,10 +14,10 @@ namespace Client
         {
             quicksort sort = new quicksort();
 
-            IArrayGenerator a = new FewUniqueArrayGenerator();
+            IArrayGenerator a = new RandomArraygenerator();
 
 
-            int[] arrayToSort = a.generateArray(200, 3200);
+            int[] arrayToSort = a.generateArray(50000000, 3200);
             
        
             //foreach (var VARIABLE in arrayToSort)
@@ -26,7 +26,7 @@ namespace Client
             //}
 
             Console.WriteLine();
-            int time = sort.sort(arrayToSort);
+            double time = sort.sort(arrayToSort);
 
             //foreach (var VARIABLE in arrayToSort)
             //{

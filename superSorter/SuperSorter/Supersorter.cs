@@ -7,13 +7,13 @@ namespace SuperSorter
     public abstract  class SuperSorter //template pattern
     {
         protected static Stopwatch sw = new Stopwatch();
-        public int sort(int[] array)
+        public double sort(int[] array)
         {
             startTime();
             sortBitch(array);
             endTime();
 
-            return sw.Elapsed.Milliseconds;
+            return sw.Elapsed.TotalMilliseconds;
         }
 
         protected abstract void sortBitch(int[] array);
@@ -33,6 +33,7 @@ namespace SuperSorter
     {
         protected override void sortBitch(int[] array)
         {
+            Console.WriteLine("sorting started");
             QuickSort(array,0,array.Length-1);
         }
 
